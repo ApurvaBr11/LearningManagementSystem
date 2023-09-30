@@ -1,0 +1,48 @@
+"use client";
+
+import { UserButton, useAuth } from "@clerk/nextjs";
+import { usePathname, useRouter } from "next/navigation";
+import { Button } from "./ui/button";
+import { LogOut } from "lucide-react";
+import Link from "next/link";
+import { SearchInput } from "./SearchInput";
+import CheckTeacher from "./CheckTeacher";
+import { isTeacher } from "@/lib/teacher";
+
+const NavbarRoutes = () => {
+  const pathname = usePathname();
+  const router = useRouter();
+  const { isLoaded, userId, sessionId, getToken } = useAuth();
+
+  const isTeacherPage = pathname?.startsWith("/teacher");
+  const isPlayerPage = pathname?.includes("/courses");
+  const isSearchPage = pathname === "/search";
+
+  return (
+    <>
+      {
+        isSearchPage && (
+          <div className="hidden md:block">
+            <SearchInput/>
+          </div>
+        )
+      }
+
+      <div className="flex gap-x-2 ml-auto ">
+      {isTeacherPage || isPlayerPage ? (
+        <Link href="/">
+          <Button size="sm">
+            <LogOut className="h-4 w-4 mr-2" />
+            Exit
+          </Button>
+        </Link>
+      ) : 
+      <CheckTeacher/>
+      }
+      <UserButton afterSignOutUrl="/" />
+    </div>
+    </>
+  );
+};
+
+export default NavbarRoutes;
