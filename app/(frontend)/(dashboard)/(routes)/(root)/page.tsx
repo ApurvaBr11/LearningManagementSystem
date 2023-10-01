@@ -2,7 +2,7 @@ import React from "react";
 
 const TodoHome = () => {
   return (
-    <div className="grainy">
+    <div className="grainy min-h-screen">
       Todo : Home
       <div>
         <div className="relative isolate">
