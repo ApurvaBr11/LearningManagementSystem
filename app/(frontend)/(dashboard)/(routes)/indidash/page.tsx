@@ -1,9 +1,9 @@
-import { auth } from "@clerk/nextjs"
 import { redirect } from "next/navigation";
 import { CheckCircle, Clock } from "lucide-react";
 import { getDashboardCourses } from "@/actions/GetDashBoardCourses";
 import { InfoCard } from "../indidash/_components/InfoCard";
 import { CoursesList } from "@/components/CoursesList";
+import { auth } from "@clerk/nextjs/server";
 
 
 export default async function Dashboard() {

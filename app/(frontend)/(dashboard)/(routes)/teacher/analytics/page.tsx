@@ -1,10 +1,10 @@
-import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
 
 import { getAnalytics } from "@/actions/getAnalytics";
 import { DataCard } from "./_component/DataCard";
 import { Chart } from "./_component/chart";
+import { auth } from "@clerk/nextjs/server";
 
 const AnalyticsPage = async () => {
   const { userId } = auth();

@@ -1,4 +1,3 @@
-import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 import { CircleDollarSign, File, LayoutDashboard, ListChecks } from "lucide-react";
 
@@ -13,6 +12,7 @@ import { ChaptersForm } from "./_components/ChapterForm";
 import { PriceForm } from "./_components/PriceForm";
 import { AttachmentForm } from "./_components/AttachmentForm";
 import { Actions } from "./_components/Actions";
+import { auth } from "@clerk/nextjs/server";
 
 
 

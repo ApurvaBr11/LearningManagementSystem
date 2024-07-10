@@ -1,4 +1,3 @@
-import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
 import { db } from "@/lib/db";
@@ -6,6 +5,7 @@ import { db } from "@/lib/db";
 import { getProgress } from "@/actions/getProgress";
 import { CourseSidebar } from "./_components/CourseSideBar";
 import { CourseNavbar } from "./_components/CourseNavBar";
+import { auth } from "@clerk/nextjs/server";
 
 const CourseLayout = async ({
   children,

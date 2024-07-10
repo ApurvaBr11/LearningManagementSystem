@@ -1,4 +1,3 @@
-import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 import { File } from "lucide-react";
 
@@ -9,6 +8,7 @@ import { Separator } from "@/components/ui/separator";
 import { CourseProgressButton } from "./_components/CourseProgressBtn";
 import { CourseEnrollButton } from "./_components/CourseEnrollmentBtn";
 import { VideoPlayer } from "./_components/VideoPlayer";
+import { auth } from "@clerk/nextjs/server";
 
 const ChapterIdPage = async ({
   params
