@@ -38,7 +38,7 @@ const NavbarRoutes = () => {
       }
       <div>
       <SignedIn>
-      <UserButton afterSignOutUrl="/sign-in" />
+      <UserButton afterSignOutUrl="/sign-up" />
       </SignedIn>
       <SignedOut>
          <SignUpButton />
