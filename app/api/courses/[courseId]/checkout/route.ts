@@ -11,7 +11,6 @@ export async function POST(
 ) {
   try {
     const user = await currentUser();
-    console.log('session' , user);
 
 
     if (!user || !user.id || !user.emailAddresses?.[0]?.emailAddress) {
@@ -89,7 +88,6 @@ export async function POST(
         userId: user.id,
       }
     });
-    console.log(session)
 
     return NextResponse.json({ url: session.url });
   } catch (error) {
