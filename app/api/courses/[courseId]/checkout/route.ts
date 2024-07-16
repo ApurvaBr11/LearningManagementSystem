@@ -86,7 +86,9 @@ export async function POST(
       metadata: {
         courseId: course.id,
         userId: user.id,
-      }
+      },
+      billing_address_collection: 'required', // Collect billing address
+
     });
 
     return NextResponse.json({ url: session.url });
