@@ -2,7 +2,7 @@ import React from "react";
 
 const TodoHome = () => {
   return (
-    <div className="grainy h-[87vh] flex flex-col overflow-hidden">
+    <div className="grainy h-[88vh] flex flex-col overflow-hidden">
       <div className="h-[80vh] justify-center items-center flex flex-col">
         <main className="flex-grow flex items-center justify-center bg-gradient-to-br from-purple-100 via-transparent to-transparent">
           <div className="text-center px-4 md:px-8 lg:px-16">
