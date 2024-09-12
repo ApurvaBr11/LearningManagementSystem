@@ -11,13 +11,13 @@ const TodoHome = () => {
     <p className="text-lg md:text-xl mb-8 text-gray-700 md:mx-20 mx-2">
       Unlock your full potential with LearnGo. Our platform offers an engaging and interactive learning experience, tailored to your needs. Explore and advance your knowledge with ease.
     </p>
-    <a href="#explore" className="bg-purple-500 text-white px-6 py-3 rounded-lg hover:bg-purple-600 transition">Let's Explore</a>
+    <a href="#explore" className="bg-purple-500 text-white px-6 py-3 rounded-lg hover:bg-purple-600 transition">Lets Explore</a>
   </div>
 </main>
 
 <footer className="bg-transparent py-6">
   <div className="container mx-auto text-center">
-    <p className="text-gray-600">&copy; {new Date().getFullYear()} LearnGo. All rights reserved.</p>
+    <p className="text-gray-600">&copy{new Date().getFullYear()} LearnGo. All rights reserved.</p>
   </div>
 </footer>
 </div>
