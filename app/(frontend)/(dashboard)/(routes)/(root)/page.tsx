@@ -3,7 +3,24 @@ import React from "react";
 const TodoHome = () => {
   return (
     <div className="grainy min-h-screen">
-      Todo : Home
+      <div className="bg-gradient-to-br from-gray-100 via-white to-gray-200 min-h-screen flex flex-col">
+
+<main className="flex-grow flex items-center justify-center bg-gradient-to-br from-purple-100 via-transparent to-transparent">
+  <div className="text-center px-4 md:px-8 lg:px-16">
+    <h2 className="text-6xl md:text-7xl font-extrabold mb-4 text-gray-800">LearnGo</h2>
+    <p className="text-lg md:text-xl mb-8 text-gray-700 md:mx-20 mx-2">
+      Unlock your full potential with LearnGo. Our platform offers an engaging and interactive learning experience, tailored to your needs. Explore and advance your knowledge with ease.
+    </p>
+    <a href="#explore" className="bg-purple-500 text-white px-6 py-3 rounded-lg hover:bg-purple-600 transition">Let's Explore</a>
+  </div>
+</main>
+
+<footer className="bg-transparent py-6">
+  <div className="container mx-auto text-center">
+    <p className="text-gray-600">&copy; {new Date().getFullYear()} LearnGo. All rights reserved.</p>
+  </div>
+</footer>
+</div>
       <div>
         <div className="relative isolate">
           <div
