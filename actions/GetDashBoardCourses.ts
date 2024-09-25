@@ -17,18 +17,11 @@ type DashboardCourses = {
 export const getDashboardCourses = async (userId: string): Promise<DashboardCourses> => {
   try {
     const purchasedCourses = await db.purchase.findMany({
-      where: {
-        userId: userId,
-      },
       select: {
         course: {
           include: {
             category: true,
-            chapters: {
-              where: {
-                isPublished: true,
-              }
-            }
+            chapters: true
           }
         }
       }

@@ -1,0 +1,1 @@
+DATABASE_URL=mongodb+srv://lms:lms@cluster0.3dwbe3y.mongodb.net/lms?retryWrites=true&w=majority&appName=Cluster0
