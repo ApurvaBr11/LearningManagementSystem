@@ -3,6 +3,8 @@ import React from "react";
 const TodoHome = () => {
   return (
     <div className="grainy h-[88vh] flex flex-col overflow-hidden">
+     
+
       <div className="h-[80vh] justify-center items-center flex flex-col">
         <main className="flex-grow flex items-center justify-center bg-gradient-to-br from-purple-100 via-transparent to-transparent">
           <div className="text-center px-4 md:px-8 lg:px-16">
@@ -12,17 +14,24 @@ const TodoHome = () => {
             </p>
             <a href="#explore" className="bg-purple-500 text-white px-6 py-3 rounded-lg hover:bg-purple-600 transition">Lets Explore</a>
           </div>
+         
         </main>
 
-        <footer className="bg-transparent py-6">
-          <div className="container mx-auto text-center">
-            <p className="text-gray-600">&copy {new Date().getFullYear()} LearnGo. All rights reserved.</p>
-          </div>
-        </footer>
+       
       </div>
-      
+       {/* Marquee effect at the top */}
+       <div className="w-full overflow-hidden bg-purple-100">
+        <div className="flex gap-8 animate-marquee whitespace-nowrap">
+          {[...Array(20)].map((_, i) => (
+            <div key={i} className="mx-4 text-2xl font-bold text-black flex items-center justify-center ">
+              <img src="/logo.svg" alt="LearnGo" className="w-10 h-10 scale-[3] " />
+              <p>LearnGo</p>
+            </div>
+          ))}
+        </div>
+      </div>
 
-      <div className="relative isolate mt-[-10rem] sm:mt-[-20rem]">
+      <div className="relative isolate ">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -34,8 +43,14 @@ const TodoHome = () => {
             }}
             className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
           />
+
         </div>
       </div>
+      <footer className="bg-transparent pt-8">
+          <div className="container mx-auto text-center">
+            <p className="text-gray-600">&copy {new Date().getFullYear()} LearnGo. All rights reserved.</p>
+          </div>
+        </footer>
     </div>
   );
 };

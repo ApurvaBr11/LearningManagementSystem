@@ -41,7 +41,10 @@ const NavbarRoutes = () => {
       <UserButton afterSignOutUrl="/sign-up" />
       </SignedIn>
       <SignedOut>
+        <div className="bg-purple-400 px-5 py-1 rounded-md">
+
          <SignUpButton />
+        </div>
       </SignedOut>
     </div>
     </div>
